@@ -520,7 +520,7 @@ table.plain {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 4rem 0 0 0;
+    margin: 0;
     padding: 4rem 0 0 0;
     border-top: #EEEEEE 1px solid;
 }
@@ -538,7 +538,8 @@ table.plain {
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin-right: 180px;
+    /*margin-right: 280px;*/
+    float:left;
 }
 
 /* Drop the share links in the space to the right.
@@ -546,22 +547,35 @@ table.plain {
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
+    /*position: absolute;
     top: 4rem;
     right: 0;
-    width: 140px;
+    width: 240px;*/
+    float:right;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
     margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #DDDDDD;
+    color: #000;
 }
 
 .post-footer .share a:hover {
     color: #50585D;
     text-decoration: none;
+}
+
+.post-footer:before,
+.post-footer:after {
+  content: "";
+  display: table;
+}
+.post-footer:after {
+  clear: both;
+}
+.ie .post-footer {
+  zoom: 1;
 }
 
 
